@@ -113,9 +113,28 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
-        <configuration>
-          <outputDirectory>C:\programs\apache-tomcat-9.0.12\webapps</outputDirectory>
-        </configuration>
+        <executions>
+          <execution>
+            <id>default-war</id>
+            <phase>package</phase>
+            <goals>
+              <goal>war</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>C:\dev\java\lib-manager\target</outputDirectory>
+            </configuration>
+          </execution>
+          <execution>
+            <id>additional-war</id>
+            <phase>install</phase>
+            <goals>
+              <goal>war</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>C:\programs\apache-tomcat-9.0.12\webapps</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <!--
       <plugin>
