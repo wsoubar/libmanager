@@ -100,16 +100,7 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>9.4.12.v20180830</version>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>...</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-          <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
+
       <!-- Default is too old, update to latest to run the latest Spring 5 + jUnit 5 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
