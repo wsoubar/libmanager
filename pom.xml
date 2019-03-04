@@ -80,9 +80,19 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.9.8</version>
     </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>3.3.7-1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery</artifactId>
+      <version>3.1.1</version>
+    </dependency>
   </dependencies>
   <build>
-    <finalName>ClientjarManager</finalName>
+    <finalName>CJManager</finalName>
     <plugins>
       <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
       <plugin>
@@ -90,7 +100,16 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>9.4.12.v20180830</version>
       </plugin>
-
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>...</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
       <!-- Default is too old, update to latest to run the latest Spring 5 + jUnit 5 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -103,7 +122,22 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
+        <configuration>
+          <outputDirectory>C:\programs\apache-tomcat-9.0.12\webapps</outputDirectory>
+        </configuration>
       </plugin>
+      <!--
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <url>http://localhost:8080/manager/text</url>
+          <server>TomcatServer</server>
+          <path>/${finalName}</path>
+        </configuration>
+      </plugin>
+      -->
     </plugins>
   </build>
 </project>
