@@ -1,0 +1,5 @@
+# Linhas iniciadas em # são comentários
+target
+.settings
+.classpath
+.project
