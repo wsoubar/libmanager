@@ -264,7 +264,7 @@ public class SFTPUtil {
         SftpFileSystemConfigBuilder.getInstance().setUserDirIsRoot(opts, false);
 
         // Timeout is count by Milliseconds
-        SftpFileSystemConfigBuilder.getInstance().setTimeout(opts, 10000);
+        SftpFileSystemConfigBuilder.getInstance().setSessionTimeoutMillis(opts, 10000);
 
         return opts;
     }

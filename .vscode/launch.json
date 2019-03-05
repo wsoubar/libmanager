@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ObjectToJsonFile",
+            "request": "launch",
+            "mainClass": "br.com.bradseg.coti.libmanager.samples.ObjectToJsonFile",
+            "projectName": "lib-manager"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
