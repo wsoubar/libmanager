@@ -94,7 +94,7 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>
-      <version>3.1.1</version>
+      <version>3.3.1</version>
     </dependency>
     <!-- http://repo1.maven.org/maven2/commons-net/commons-net/3.6/commons-net-3.6.jar -->
     <dependency>
@@ -131,7 +131,7 @@
   </dependencies>
 
   <build>
-    <finalName>CJManager</finalName>
+    <finalName>COTI-LibManager</finalName>
     <plugins>
       <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
       <plugin>
