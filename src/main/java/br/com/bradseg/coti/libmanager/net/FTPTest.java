@@ -2,7 +2,6 @@ package br.com.bradseg.coti.libmanager.net;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 
 import org.apache.commons.net.PrintCommandListener;

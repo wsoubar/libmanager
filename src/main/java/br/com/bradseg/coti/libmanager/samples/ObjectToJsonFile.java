@@ -7,17 +7,20 @@ import java.io.IOException;
 
 public class ObjectToJsonFile {
     public static void main(String[] args) {
+        System.out.println("inicio");
         Artist artist = new Artist();
-        artist.setId(1L);
-        artist.setName("The Beatles");
+        artist.setId(3L);
+        artist.setName("333 The Beatles");
 
         ObjectMapper mapper = new ObjectMapper();
 
-        File file = new File("artist.json");
+        File file = new File("c:/dev/java/artist.json");
         try {
             // Serialize Java object info JSON file.
             mapper.writeValue(file, artist);
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -27,6 +30,8 @@ public class ObjectToJsonFile {
             System.out.println("newArtist.getId() = " + newArtist.getId());
             System.out.println("newArtist.getName() = " + newArtist.getName());
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
